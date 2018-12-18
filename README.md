@@ -1,44 +1,20 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 目標
+這是拿來學習 firebase, serviceWorker, pushAPI, notificationAPI, localStorage, firebaseStorage 的專案
 
-## Available Scripts
+## 預計功能
+1. 使用者設定提醒功能，設定1.日期以及2.項目名稱
+2. 時間到了會跳出 notification 提醒使用者
 
-In the project directory, you can run:
 
-### `npm start`
+## 預計使用技術
+### 資料儲存
+資料放在 firebase 上，App 開啟時取得資料
+Bonus: 同步存一份在 localstorage ，離線時用 localstorage ，有網路時再同步至 firebase
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### PushNotification
+用瀏覽器提供的 push API 向 firebase 發出訂閱，收到 push 後用 Notification API 推播至手機(待研究)
+Firebase cronjob 檢查提醒項目
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 其他
+想做這個是因為一直想做冰箱剩餘食材相關的 App，如果沒有提醒功能的話那個 App 就相當於廢了一半了，所以先做這個練練手，順便熟悉大家都在用的 firebase。
